@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="ParameterExample" parallel="false">
+	<test name="ParameterTest">
+		<classes>
+			<class name="com.testng.dataProvider.TestNGDataProvider"></class>
+			<parameter name="para1" value="1"></parameter>
+			<parameter name="para2" value="hello_parame2"></parameter>
+		</classes>
+	</test>
+
+
+	<test name="UnitLevel">
+		<classes>
+			<class name="com.testng.dataProvider.DataProviderParametersExample" />
+		</classes>
+	</test>
+
+	<test name="AcceptanceLevel">
+		<classes>
+			<class
+				name="com.testng.dataProvider.DataProviderParametersAcceptanceExample" />
+		</classes>
+	</test>
+
+	<test name="IntegrationLevel">
+		<classes>
+			<class
+				name="com.testng.dataProvider.DataProviderParametersIntegrationExample" />
+		</classes>
+	</test>
+
+</suite>
