@@ -11,4 +11,9 @@ public class TestCase001_CreateContact extends TestCaseBase{
 		public void run(){
 		loginPage.login("autotest3031@openwave.com", "p");
 		}
+		
+		public static void main(String args[]){
+			TestCase001_CreateContact tc = new TestCase001_CreateContact();
+			tc.run();
+		}
 }

@@ -1,25 +1,31 @@
 package com.test.pageobject;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.ios.IOSDriver;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.PageFactory;
+
+import io.appium.java_client.ios.IOSDriver;
 
 public class Base {
 	DesiredCapabilities capability;
 	LoginPage loginPage;
-	IOSDriver<?> driver;
+	public static IOSDriver<?> driver;
 //    public static InheritableThreadLocal<RemoteWebDriver> driver = new InheritableThreadLocal<RemoteWebDriver>();
 	public Base() {
 		this.setSeleniumGrid();
 		driver.get("http://172.26.201.178:8080/kiwi-octane");
+		try {
+			Thread.sleep(20000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 //		this.getDriver();
 //		driver.get().navigate().to("http://172.26.201.178:8080/kiwi-octane/index-tui.jsp");
-//		loginPage=PageFactory.initElements((IOSDriver)driver.get(), LoginPage.class);
+		loginPage=PageFactory.initElements(driver ,LoginPage.class);
 
 	}
 	public void setSeleniumGrid(){
@@ -37,7 +43,7 @@ public class Base {
     	 //driver;
 
     	try {
-    		driver= new IOSDriver(new URL("http://10.13.16.37:44441/wd/hub"),capability);
+    		driver= new IOSDriver(new URL("http://localhost:4723/wd/hub"),capability);
 
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
