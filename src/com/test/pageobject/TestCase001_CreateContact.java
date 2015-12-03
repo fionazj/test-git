@@ -10,6 +10,7 @@ public class TestCase001_CreateContact extends TestCaseBase{
 		@Test(groups = { "zj" })
 		public void run(){
 		loginPage.login("autotest3031@openwave.com", "p");
+		loginPage.swipeFirstMail();
 		}
 		
 		public static void main(String args[]){

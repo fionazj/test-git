@@ -14,4 +14,14 @@ public class LoginPage extends LoginPageFacotry {
 			throw ex;
 		}
 	}
+	
+	public void swipeFirstMail(){
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Base.driver.scrollTo("29734");
+		}
 }
