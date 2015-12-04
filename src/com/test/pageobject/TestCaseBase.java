@@ -2,15 +2,15 @@ package com.test.pageobject;
 
 
 public class TestCaseBase extends Base implements TestCase{
-	Base base;
+
 
 	public void beforeSuite() {
-		System.out.println("hello");
-		base =  new TestCaseBase();
+		System.out.println("before suite");
+
 	}
 
 	public void beforeClass() {
-		base =  new TestCaseBase();
+		System.out.println("before class");
 
 	}
 
@@ -26,17 +26,16 @@ public class TestCaseBase extends Base implements TestCase{
 
 	public void afterMethod() {
 		// TODO Auto-generated method stub
-		driver.quit();
 	}
 
 	public void afterClass() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("after class");
+		driver.quit();
 	}
 
 	public void afterSuite() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("after suite");
 	}
 	
 }

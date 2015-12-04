@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="false">
-  <test name="Test">
-    <classes>
-      <class name="com.test.pageobject.TestCase001_CreateContact.java"/>
-    </classes>
-  </test> <!-- Test -->
+	<test name="Test">
+		<groups>
+			<run>
+				<include name="zj">
+				</include>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.test.pageobject.TestCase001_CreateContact.java" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

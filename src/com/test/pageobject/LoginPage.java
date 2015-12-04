@@ -2,6 +2,8 @@ package com.test.pageobject;
 
 import org.openqa.selenium.WebDriverException;
 
+import io.appium.java_client.ios.IOSDriver;
+
 public class LoginPage extends LoginPageFacotry {
 	public void login(String name, String pwd){
 		try {
@@ -22,6 +24,6 @@ public class LoginPage extends LoginPageFacotry {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		Base.driver.scrollTo("29734");
+			((IOSDriver) Base.driver).scrollTo("29734");
 		}
 }
