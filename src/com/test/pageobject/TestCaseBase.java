@@ -1,17 +1,17 @@
 package com.test.pageobject;
 
-import org.openqa.selenium.support.PageFactory;
 
 public class TestCaseBase extends Base implements TestCase{
+	Base base;
 
 	public void beforeSuite() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("hello");
+		base =  new TestCaseBase();
 	}
 
 	public void beforeClass() {
-		// TODO Auto-generated method stub
-		
+		base =  new TestCaseBase();
+
 	}
 
 	public void beforeMethod() {
@@ -26,7 +26,7 @@ public class TestCaseBase extends Base implements TestCase{
 
 	public void afterMethod() {
 		// TODO Auto-generated method stub
-		
+		driver.quit();
 	}
 
 	public void afterClass() {

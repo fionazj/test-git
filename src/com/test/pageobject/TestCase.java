@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 public interface TestCase {
-	@BeforeSuite
+	@BeforeSuite(alwaysRun = true)
 	public void beforeSuite();
 
     @BeforeClass
